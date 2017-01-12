@@ -8,7 +8,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Concurrent;
 using PureMVC.Interfaces;
 using PureMVC.Patterns;
 
@@ -54,7 +53,7 @@ namespace PureMVC.Core
         public Controller(string key)
         {
             m_multitonKey = key;
-            m_commandMap = new ConcurrentDictionary<string, object>();
+            m_commandMap = new Dictionary<string, object>();
             if (m_instanceMap.ContainsKey(key))
                 throw new Exception(MULTITON_MSG);
             m_instanceMap[key] = this;
@@ -239,7 +238,7 @@ namespace PureMVC.Core
         /// </summary>
         static Controller()
         {
-            m_instanceMap = new ConcurrentDictionary<string, IController>();
+            m_instanceMap = new Dictionary<string, IController>();
         }
 
         /// <summary>

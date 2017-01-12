@@ -1,0 +1,6 @@
+C:\work\puremvc-csharp-multicore-framework\Binary\PureMVC.MultiCore.DotNet.xml
+C:\work\puremvc-csharp-multicore-framework\Binary\PureMVC.MultiCore.DotNet.dll
+C:\work\puremvc-csharp-multicore-framework\Binary\PureMVC.MultiCore.DotNet.pdb
+C:\work\puremvc-csharp-multicore-framework\PureMVC.MultiCore.DotNet\obj\Debug\PureMVC.MultiCore.DotNet.csprojResolveAssemblyReference.cache
+C:\work\puremvc-csharp-multicore-framework\PureMVC.MultiCore.DotNet\obj\Debug\PureMVC.MultiCore.DotNet.dll
+C:\work\puremvc-csharp-multicore-framework\PureMVC.MultiCore.DotNet\obj\Debug\PureMVC.MultiCore.DotNet.pdb

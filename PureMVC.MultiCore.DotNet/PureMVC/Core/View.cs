@@ -8,7 +8,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Concurrent;
 using PureMVC.Interfaces;
 using PureMVC.Patterns;
 
@@ -47,8 +46,8 @@ namespace PureMVC.Core
         protected View(string key)
         {
             m_multitonKey = key;
-            m_mediatorMap = new ConcurrentDictionary<string, IMediator>();
-            m_observerMap = new ConcurrentDictionary<string, IList<IObserver>>();
+            m_mediatorMap = new Dictionary<string, IMediator>();
+            m_observerMap = new Dictionary<string, IList<IObserver>>();
             if (m_instanceMap.ContainsKey(key))
                 throw new Exception(MULTITON_MSG);
             m_instanceMap[key] = this;
@@ -326,7 +325,7 @@ namespace PureMVC.Core
         /// </summary>
         static View()
         {
-            m_instanceMap = new ConcurrentDictionary<string, IView>();
+            m_instanceMap = new Dictionary<string, IView>();
         }
 
         /// <summary>

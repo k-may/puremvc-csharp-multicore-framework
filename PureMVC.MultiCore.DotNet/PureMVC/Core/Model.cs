@@ -8,7 +8,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Concurrent;
 using PureMVC.Interfaces;
 
 #endregion
@@ -48,7 +47,7 @@ namespace PureMVC.Core
         public Model(string key)
         {
             m_multitonKey = key;
-            m_proxyMap = new ConcurrentDictionary<string, IProxy>();
+            m_proxyMap = new Dictionary<string, IProxy>();
             if (m_instanceMap.ContainsKey(key))
                 throw new Exception(MULTITON_MSG);
             m_instanceMap[key] = this;
@@ -172,7 +171,7 @@ namespace PureMVC.Core
         /// </summary>
         static Model()
         {
-            m_instanceMap = new ConcurrentDictionary<string, IModel>();
+            m_instanceMap = new Dictionary<string, IModel>();
         }
 
         /// <summary>

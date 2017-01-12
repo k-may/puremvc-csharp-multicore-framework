@@ -10,7 +10,6 @@ using System;
 using System.Collections.Generic;
 using PureMVC.Core;
 using PureMVC.Interfaces;
-using System.Collections.Concurrent;
 
 #endregion
 
@@ -534,7 +533,7 @@ namespace PureMVC.Patterns
         ///</summary>
         static Facade()
         {
-            m_instanceMap = new ConcurrentDictionary<string, IFacade>();
+            m_instanceMap = new Dictionary<string, IFacade>();
         }
 
         /// <summary>
